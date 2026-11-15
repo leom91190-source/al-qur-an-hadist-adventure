@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>QUR'AN ADVENTURE – Petualangan Bersama Al-Qur'an</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=Noto+Naskh+Arabic:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Nunito:wght@400;600;700;800;900&amp;family=Noto+Naskh+Arabic:wght@500;700&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
   <style>
     :root{--mint:#d9f5e9;--green:#16856b;--deep:#145646;--cream:#fffaf0;--gold:#f6c85f;--ink:#243c35;--muted:#617b72;--line:#dcebe4}
@@ -12,28 +12,79 @@
     .surah-card{background:#f2faf5;border:1px solid var(--line);border-radius:18px;padding:20px;margin:16px 0}.surah-card h3{margin:0;color:var(--deep)}.surah-head{display:flex;justify-content:space-between;align-items:start;gap:12px;flex-wrap:wrap}.surah-actions{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.surah-verses{background:white;border:1px solid var(--line);border-radius:15px;padding:12px 20px}.surah-verses p{font-family:"Noto Naskh Arabic",serif;font-size:clamp(25px,3vw,34px);line-height:2.1;text-align:right;color:var(--deep);margin:0;padding:7px 0;border-bottom:1px solid var(--line)}.surah-verses p:last-child{border-bottom:0}.verse-pair{padding:9px 0;border-bottom:1px solid var(--line)}.verse-pair:last-child{border-bottom:0}.surah-verses .verse-arabic{border:0;padding:0}.surah-verses .verse-meaning{direction:ltr;text-align:left;unicode-bidi:isolate;font-family:"Nunito",sans-serif;font-size:16px;line-height:1.6;color:var(--ink);margin:3px 0 0;padding:0;border:0}.verse-meaning strong{color:var(--deep)}.verse-meaning.pending{color:var(--muted)}.surah-status{font-size:13px;font-weight:800;color:var(--deep);min-height:20px}.flash-guide{width:100%;max-width:520px;margin-top:12px;padding:14px 18px;background:#fff;border:1px solid var(--line);border-radius:15px;text-align:left}.flash-guide h3{font-size:16px;margin:0 0 5px;color:var(--deep)}.flash-guide p{margin:3px 0;font-size:14px}.flash-guide .example{font-family:"Noto Naskh Arabic",serif;font-size:24px;color:var(--deep);direction:rtl;unicode-bidi:isolate}
     @media(max-width:800px){.topinner{align-items:flex-start;flex-direction:column;padding:14px 0;gap:8px}.nav{width:100%;overflow-x:auto;flex-wrap:nowrap}.nav button{white-space:nowrap;font-size:12px;padding:8px}.hero{grid-template-columns:1fr;padding:30px}.hero-art{max-width:330px}.grid4,.mini-grid{grid-template-columns:repeat(2,1fr)}.two-col,.hadith-grid{grid-template-columns:1fr}}
     @media(max-width:520px){.shell{padding:0 15px}.view{padding-top:22px}.hero h1{letter-spacing:-1px}.hero{border-radius:23px}.grid4{gap:9px}.shortcut{padding:15px}.shortcut h3{font-size:15px}.stats{grid-template-columns:1fr}.answers{grid-template-columns:1fr}.match-row{grid-template-columns:1fr}.page-top{align-items:flex-start;flex-direction:column}.arabic{font-size:25px}}
+    /* Premium Islamic learning visual system */
+    :root{--mint:#e3f4ec;--green:#087b60;--deep:#064d40;--cream:#fffaf0;--gold:#e9bc62;--ink:#173d34;--muted:#647c74;--line:#e2eee8}
+    body{font-family:"Nunito",sans-serif;background:#f8faf7;color:var(--ink)}button,input,select,textarea{font-family:"Nunito",sans-serif}h1,h2,h3,.brand,.page-title{font-family:"Poppins",sans-serif}h1,h2,h3{letter-spacing:-.035em}button,a,select{transition:background-color .25s ease,color .25s ease,border-color .25s ease,transform .25s ease,box-shadow .25s ease}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #c88b25;outline-offset:3px}
+    .shell{max-width:1240px;padding:0 32px}.topbar{background:rgba(255,255,255,.96);box-shadow:0 4px 24px rgba(10,68,49,.045);border-bottom:1px solid #eaf1eb}.topinner{min-height:88px}.brand{font-size:17px;letter-spacing:-.045em;white-space:nowrap}.brandmark{width:42px;height:42px;border-radius:14px;background:#087b60;color:#f7d383;box-shadow:0 6px 14px #087b6030}.nav{gap:4px}.nav button{font-size:13px;padding:11px 14px;border-radius:10px}.nav button.active{background:#e6f5ed;color:var(--deep)}.view{padding-top:38px;padding-bottom:86px}
+    .hero{min-height:480px;padding:64px 66px;background:linear-gradient(110deg,#e7f5eb 0%,#f3f8ee 55%,#fff4d9 100%);border:1px solid #dceee4;border-radius:30px;box-shadow:0 20px 55px rgba(14,77,53,.07);grid-template-columns:1.08fr .92fr}.eyebrow{background:#fffdf7;border:1px solid #e6ead9;color:#16745e;padding:8px 16px;box-shadow:0 4px 15px #164f3510}.hero h1{font-family:"Poppins",sans-serif;font-weight:800;font-size:clamp(38px,4.3vw,58px);letter-spacing:-.055em;max-width:620px;margin:22px 0 16px}.hero p{font-size:17px;line-height:1.8;margin-bottom:26px}.hero-art{display:none}.hero-photo-wrap{position:relative;justify-self:stretch;max-width:460px;width:100%;margin:auto}.hero-photo{width:100%;height:330px;object-fit:cover;border-radius:32px;display:block;box-shadow:18px 20px 0 #c9e5d0,0 22px 35px #164f3520;transform:rotate(2deg)}.hero-photo-wrap:after{content:'✦';position:absolute;right:-22px;top:-25px;width:70px;height:70px;border-radius:22px;background:#f5ce78;color:#806019;display:grid;place-items:center;font-size:34px;transform:rotate(12deg);box-shadow:0 10px 25px #8b6d232a}
+    .btn{border-radius:12px;padding:13px 21px;box-shadow:0 5px 12px #087b601c}.btn.gold{background:#e9bc62;color:#3c311a}.btn.gold:hover{background:#f5cf7c}.sectionhead{margin:58px 0 22px}.sectionhead h2,.page-title{font-weight:700;letter-spacing:-.045em}.sectionhead p,.intro{font-size:15px}.grid4{gap:18px}.card,.panel{border-color:#e5eee8;border-radius:22px;box-shadow:0 10px 30px rgba(20,72,54,.045)}.shortcut{padding:14px 14px 23px;overflow:hidden;box-shadow:0 9px 28px #124c3510}.shortcut:hover{transform:translateY(-6px);box-shadow:0 18px 36px #124c351c;border-color:#b8d9c8}.shortcut-image{display:block;width:100%;height:142px;object-fit:cover;border-radius:15px;margin-bottom:18px}.shortcut .iconbox{margin:0 0 10px 5px;width:42px;height:42px;border-radius:12px}.shortcut h3,.shortcut p{margin-left:6px;margin-right:6px}.shortcut h3{font-size:16px}.shortcut p{font-size:13px;line-height:1.5}.stats{margin-top:22px;gap:18px}.stat{border:1px solid #e3efe8;background:#fff;border-radius:21px;padding:25px 28px}.stat strong{font-family:"Poppins",sans-serif}.progress-fill{background:linear-gradient(90deg,#0b8064,#69bf84)}
+    .page-top{padding:24px 0 6px}.topic-nav,.game-tabs{gap:9px;margin-bottom:23px}.topic-nav button,.game-tabs button{border-radius:12px;padding:11px 15px}.topic-nav button:hover,.game-tabs button:hover{border-color:#78bf9d;transform:translateY(-2px)}.topic-nav button.active{background:var(--deep)}.game-tabs button.active{background:#f6dfaa;border-color:#e9bc62}.panel{padding:30px}.flash{background:linear-gradient(145deg,#e5f5ec,#fffaf0);border:1px solid #d8eadc}.mini{background:#f3faf5;border:1px solid #e5f1e9}.surah-card{background:#f7fbf7}.surah-verses{overflow-wrap:anywhere}.verse-arabic{direction:rtl}.hadith-card{padding:28px}.hadith-card .arabic{background:#f1f9f3}.choice:hover:not(:disabled),.token:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 6px 14px #174e3220}.footer{background:#e7f2e9;border-top:1px solid #d8e8db}.footer-inner{padding-top:6px;padding-bottom:6px}.footer a:hover{text-decoration:underline}
+    .hadith-grid{align-items:stretch}.hadith-card{min-width:0}.hadith-parts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}.hadith-part{background:#f7fbf7;border:1px solid #dcebe4;border-radius:16px;padding:16px;min-width:0;overflow-wrap:anywhere}.hadith-part h3{font-size:16px;line-height:1.35;color:var(--deep);margin:0 0 8px}.hadith-part p{font-size:16px;line-height:1.65;margin:0}.hadith-part .arabic{font-size:clamp(25px,3vw,31px);line-height:1.9;margin:4px 0 10px}.hadith-part.full{grid-column:1/-1}.hadith-part .source{margin-top:12px}.hadith-glossary{margin:12px 0 22px;padding:18px 22px;background:#e9f6ed;border:1px solid #d4e8d9;border-radius:18px;font-size:16px;line-height:1.7}@media(max-width:560px){.hadith-parts{grid-template-columns:1fr}.hadith-part.full{grid-column:auto}.hadith-card{padding:18px}}
+    .surah-verses .verse-latin{direction:ltr;text-align:left;font-family:"Nunito",sans-serif;font-size:15px;line-height:1.65;color:var(--ink);margin:4px 0 0;padding:0;border:0;overflow-wrap:anywhere}.verse-latin strong{color:var(--deep)}.tajwid-legend{display:flex;flex-wrap:wrap;gap:8px 16px;padding:13px 16px;margin:16px 0;background:#fff;border:1px solid var(--line);border-radius:14px;font-size:14px}.tajwid-legend strong{width:100%;color:var(--deep)}.tajwid-key{display:inline-flex;align-items:center;gap:6px;color:var(--ink)}.tajwid-key i{width:15px;height:15px;border-radius:4px;background:var(--rule-color);border:1px solid #87968e}.tajwid-note{font-size:13px}.verse-arabic span[class^="tajwid-"]{font:inherit;color:#173d34;box-decoration-break:clone;-webkit-box-decoration-break:clone;border-radius:.2em;padding:.02em .055em;white-space:nowrap}.verse-arabic .tajwid-mad{background:#d9ecff}.verse-arabic .tajwid-qalqalah{background:#ffe1d4}.verse-arabic .tajwid-qalqalah-kubra{background:#ffe1d4;box-shadow:inset 0 -0.09em 0 #e6a88e;border-radius:.2em}.verse-arabic .tajwid-ghunnah{background:#eadcfa}.verse-arabic .tajwid-ikhfa{background:#fff0bd}.verse-arabic .tajwid-idgham{background:#d2f2df}.verse-arabic .tajwid-izhar{background:#ffdfeb}@media(max-width:520px){.surah-verses{padding:10px 12px}.surah-verses .verse-arabic{font-size:clamp(24px,7vw,32px);line-height:2.25}.tajwid-legend{gap:8px 12px}}
+    .visual-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}.visual-tile{position:relative;min-height:175px;overflow:hidden;border-radius:20px;background:#dceee4}.visual-tile img{width:100%;height:190px;object-fit:cover;display:block;transition:transform .35s}.visual-tile:hover img{transform:scale(1.06)}.visual-tile span{position:absolute;bottom:12px;left:12px;background:#fffefaef;color:var(--deep);padding:7px 12px;border-radius:9px;font-weight:800;font-size:12px}
+    @media(max-width:950px){.topinner{flex-direction:column;align-items:flex-start;gap:9px;padding:14px 0}.nav{width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px}.nav button{white-space:nowrap}.hero{padding:40px;min-height:0}.hero-photo{height:290px}.grid4{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:680px){.shell{padding:0 17px}.view{padding-top:20px;padding-bottom:55px}.hero{grid-template-columns:1fr;padding:30px 24px 37px;gap:30px;border-radius:23px}.hero h1{font-size:clamp(32px,9vw,43px)}.hero p{font-size:15px}.hero-photo-wrap{max-width:420px;width:calc(100% - 18px)}.hero-photo{height:240px}.hero-photo-wrap:after{width:52px;height:52px;right:-12px;top:-15px}.sectionhead{margin-top:43px}.shortcut-image{height:115px}.panel{padding:20px}.visual-gallery{grid-template-columns:1fr 1fr}.visual-tile img{height:145px}.stats{grid-template-columns:1fr}}
+    @media(max-width:440px){.grid4{gap:10px}.shortcut{padding:9px 9px 18px}.shortcut-image{height:95px;border-radius:11px}.shortcut h3{font-size:14px}.shortcut p{font-size:12px}.shortcut .iconbox{width:36px;height:36px}.visual-gallery{gap:10px}.visual-tile img{height:120px}.visual-tile span{font-size:11px;padding:5px 7px}.page-title{font-size:29px}.flash .arabic{font-size:80px}}
+    .taj-module p,.taj-module li{font-size:15px;line-height:1.7}.taj-module .taj-intro{background:#f2faf5;border-radius:18px;padding:18px 20px;margin:18px 0}.taj-category-nav{display:flex;gap:8px;overflow-x:auto;padding:3px 2px 12px;margin:18px 0;scrollbar-width:thin}.taj-category-nav button{flex:0 0 auto;border:1px solid var(--line);background:white;color:var(--deep);padding:10px 15px;border-radius:30px;font-weight:800}.taj-category-nav button.active{background:var(--deep);color:white}.taj-category{display:none}.taj-category.active{display:block}.taj-category h3{font-size:24px;margin:18px 0 6px}.taj-category h4{font-size:17px;color:var(--deep);margin:0 0 8px}.taj-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0}.taj-card{background:#fff;border:1px solid var(--line);border-top:5px solid var(--rule-color,#c7e8d6);border-radius:18px;padding:18px;min-width:0}.taj-card p{margin:8px 0}.taj-card .arabic{display:block;font-size:clamp(28px,3vw,35px);line-height:1.8;overflow-wrap:anywhere}.taj-letters{background:#f2faf5;border-radius:10px;padding:8px 12px}.taj-letters .arabic{font-size:27px}.taj-example{background:var(--rule-color,#e8f6ef);border-radius:12px;padding:9px 13px;margin-top:12px}.taj-example small{display:block;font-size:13px;font-weight:800;color:var(--deep)}.taj-module .tajwid-key i{flex:none}.taj-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;margin:18px 0}.taj-table{width:100%;border-collapse:collapse;min-width:540px;background:white}.taj-table th,.taj-table td{text-align:left;padding:12px 15px;border-bottom:1px solid var(--line);vertical-align:middle;font-size:15px}.taj-table th{background:#e9f6ee;color:var(--deep)}.taj-table tr:last-child td{border-bottom:0}.taj-table .arabic{font-size:27px;white-space:nowrap}.taj-module .controls{justify-content:space-between}.taj-module button:focus-visible{outline:3px solid #c88b25;outline-offset:3px}@media(max-width:680px){.taj-grid{grid-template-columns:1fr}.taj-category h3{font-size:21px}.taj-module .taj-intro{padding:15px}}
+    /* Soft blue learning palette; all existing layouts and interactions remain unchanged. */
+    :root{--mint:#dcecfb;--green:#286aab;--deep:#194a7b;--cream:#e9f2fb;--gold:#9cc9ef;--ink:#20384f;--muted:#526b81;--line:#cbddec}
+    body{background:#eaf2f9;color:var(--ink)}.topbar{background:rgba(224,238,249,.97);border-bottom-color:#c8ddeb;box-shadow:0 4px 24px rgba(25,74,123,.08)}
+    .brandmark{background:var(--green);color:#e9f5ff;box-shadow:0 6px 14px #286aab30}
+    .nav button.active,.nav button:hover{background:#cce4f8;color:var(--deep)}
+    .hero{background:linear-gradient(110deg,#d7eafb 0%,#e6f2fc 55%,#dceaf6 100%);border-color:#c5ddec;box-shadow:0 20px 55px rgba(25,74,123,.09)}
+    .hero p,.panel p{color:#405c74}.eyebrow{background:#edf6fd;color:var(--deep);border-color:#bed8ea;box-shadow:0 4px 15px #194a7b10}.hero-photo{box-shadow:18px 20px 0 #bad8ef,0 22px 35px #194a7b20}.hero-photo-wrap:after{background:#b8daf3;color:#194a7b;box-shadow:0 10px 25px #194a7b2a}
+    .btn{box-shadow:0 5px 12px #286aab26}.btn.gold{background:#a9d2f2;color:#173e65}.btn.gold:hover:not(:disabled){background:#8bbfe9;color:#173e65}.btn.secondary{background:#edf6fd}.btn:hover:not(:disabled){background:var(--deep)}
+    .card,.panel,.stat{background:#f1f7fc;border-color:var(--line);box-shadow:0 10px 30px rgba(25,74,123,.055)}.shortcut{box-shadow:0 9px 28px #194a7b10}.shortcut:hover{border-color:#92bedf;box-shadow:0 18px 36px #194a7b1c}
+    .progress-track{background:#d6e7f5}.progress-fill{background:linear-gradient(90deg,#286aab,#76b2df)}
+    .topic-nav button,.game-tabs button,.taj-category-nav button{background:#edf6fd}.topic-nav button:hover,.game-tabs button:hover{border-color:#88b7da}.topic-nav button.active,.taj-category-nav button.active{background:var(--deep);color:#fff}.game-tabs button.active{background:#b9daf4;border-color:#81b3d9;color:var(--deep)}
+    .flash{background:linear-gradient(145deg,#dcecfb,#edf6fd);border-color:#c5ddeb}.mini,.surah-card,.hadith-part,.taj-module .taj-intro,.taj-letters{background:#e8f3fb}.hadith-card .arabic{background:#e1effa}.hadith-glossary{background:#dcecf9;border-color:#bed8ea}.taj-table th{background:#dcecf9}.taj-card,.taj-table,.surah-verses,.flash-guide,.tajwid-legend{background:#f1f7fc}
+    .choice{background:#edf6fd}.choice.selected{background:#d6eafa}.token{background:#dcecfb;border-color:#99c3e4}.answer-zone{border-color:#99c3e4;background:#e9f3fb}.match-row select,select{border-color:#aacbe3;background:#edf6fd}.visual-tile{background:#d8e9f7}.visual-tile span{background:#edf6fdef}.note{color:#36546e}
+    .footer{background:#d9eaf7;border-top-color:#bfd8eb}
+    button:focus-visible,a:focus-visible,select:focus-visible,.taj-module button:focus-visible{outline-color:#2369a8}
+    /* Gerak singkat hanya saat navigasi; teks ayat dan blok tajwid tetap tenang. */
+    @keyframes masuk-lembut{from{opacity:.72;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+    .nav button,.topic-nav button,.game-tabs button,.taj-category-nav button{position:relative;transition:background-color .22s ease,color .22s ease,border-color .22s ease,box-shadow .22s ease,transform .22s ease}
+    .nav button::after,.topic-nav button::after,.game-tabs button::after,.taj-category-nav button::after{content:"";position:absolute;left:18%;right:18%;bottom:3px;height:3px;border-radius:4px;background:#286aab;transform:scaleX(0);transition:transform .22s ease}
+    .nav button.active::after,.topic-nav button.active::after,.game-tabs button.active::after,.taj-category-nav button.active::after{transform:scaleX(1)}
+    .topic-nav button.active::after,.taj-category-nav button.active::after{background:#b9daf4}
+    .nav button:hover:not(:disabled),.nav button:focus-visible,.topic-nav button:hover:not(:disabled),.game-tabs button:hover:not(:disabled),.taj-category-nav button:hover:not(:disabled){transform:translateY(-2px)}
+    .btn:focus-visible,.choice:focus-visible,.token:focus-visible,.shortcut:focus-visible{box-shadow:0 0 0 7px #fff,0 0 0 10px #286aab!important}
+    .view.active > .page-top,.view.active > .hero,.view.active > .grid4 .shortcut,.topic.active:not(#topic-2):not(#topic-3),.game.active,.taj-category.active > h3{animation:masuk-lembut .28s ease-out both}
+    .view.active > .grid4 .shortcut:nth-child(2){animation-delay:45ms}.view.active > .grid4 .shortcut:nth-child(3){animation-delay:90ms}.view.active > .grid4 .shortcut:nth-child(4){animation-delay:135ms}
+    body.reduce-motion .nav button::after,body.reduce-motion .topic-nav button::after,body.reduce-motion .game-tabs button::after,body.reduce-motion .taj-category-nav button::after{transition:none!important}
+    @media(prefers-reduced-motion:reduce){.nav button::after,.topic-nav button::after,.game-tabs button::after,.taj-category-nav button::after{transition:none!important}button:hover,button:focus-visible,.shortcut:hover{transform:none!important}}
+    .skip-link{position:absolute;left:12px;top:-100px;z-index:1000;background:#fff;color:#123c67;padding:12px 18px;border-radius:10px;font-weight:800}.skip-link:focus{top:12px}.access-panel{max-width:1200px;margin:0 auto 14px;padding:18px 24px;background:#e1effa;border:2px solid #356b9c;border-radius:16px}.access-panel h2{font-size:1.3rem;margin:0 0 12px}.access-panel p{margin:12px 0 0}.access-actions{display:flex;flex-wrap:wrap;gap:9px}.access-actions button{white-space:normal} :where(button,a,select,input,[tabindex]):focus-visible{outline:4px solid #a24700!important;outline-offset:4px!important;box-shadow:0 0 0 7px #fff!important}button{min-height:38px} .token,.choice,.nav button{overflow-wrap:anywhere} .verse-arabic span[class^="tajwid-"]{text-decoration:underline;text-decoration-style:dotted;text-decoration-thickness:2px;text-underline-offset:.13em} body.high-contrast{--ink:#071b31;--muted:#183a57;--deep:#082c52;--line:#31577a;background:#daeafa;color:#071b31}body.high-contrast .card,body.high-contrast .panel,body.high-contrast .surah-card,body.high-contrast .surah-verses,body.high-contrast .taj-card,body.high-contrast .access-panel{background:#fff;border-color:#31577a}body.high-contrast .btn,body.high-contrast .nav button.active,body.high-contrast .topic-nav button.active,body.high-contrast .taj-category-nav button.active{background:#082c52;color:#fff}body.high-contrast .choice,body.high-contrast .token,body.high-contrast select{background:#fff;color:#071b31;border:2px solid #31577a}body.high-contrast .choice.correct{border:4px solid #05643c}body.high-contrast .choice.wrong{border:4px dashed #9c291a}body.reader-mode{letter-spacing:.055em;line-height:1.85}body.reader-mode p,body.reader-mode li,body.reader-mode button{line-height:1.85}body.reader-mode .arabic,body.reader-mode .verse-arabic{letter-spacing:normal;line-height:2.4}body.reduce-motion *,body.reduce-motion *::before,body.reduce-motion *::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important;transform:none!important}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
   </style>
   <script src="/_sdk/ea2423e0a01a756f.data_sdk.js" type="text/javascript" integrity="sha512-Sg0g23oG9zpxeVGJw6Q935Wt19sv7pbBtYnmz0dqpxqMmhlUFeBYJjrBQheq1xeE/u69m7uZ8NgZRq4P2+K57w=="></script>
   <script src="/_sdk/d9be832f00068e0b.editing_sdk.js" type="text/javascript" integrity="sha512-yqvHt4MzL0mCVmFaeHgBiGCOYxuulJuObgwVVFUiCzzw/SBQGJ5XNA+pjVE7dF3MwlbrCMCAsgsDr3YQqF2Y4w=="></script>
   <script src="/_sdk/a202d01287f70bbd.resizing_sdk.js" type="text/javascript" integrity="sha512-1HSymNrRbmVrPINeyKeKDVHS1r/3KBjQvJ/IjvgAGUrP4+gPCV6nzQEbyDs7SEReA7mlPuHyFKB9Zk2K9KmXhQ=="></script>
  </head>
  <body>
+  <a class="skip-link canva-link" href="#konten-utama">Lewati ke konten utama</a>
   <header class="topbar canva-header">
    <div class="shell topinner">
     <div class="brand"><span class="brandmark" aria-hidden="true">✦</span><span>QUR'AN ADVENTURE</span>
     </div>
     <nav class="nav canva-menu" aria-label="Navigasi utama">
      <button class="active canva-button" data-view="home">Beranda</button><button class="canva-button" data-view="quran">Materi Al-Qur'an</button><button class="canva-button" data-view="hadith">Materi Hadis</button><button class="canva-button" data-view="games">Permainan</button><button class="canva-button" data-view="evaluation">Evaluasi</button>
-    </nav>
+    </nav><button id="access-toggle" type="button" class="btn secondary canva-button" aria-expanded="false" aria-controls="access-panel">Aksesibilitas</button>
+   </div>
+   <div id="access-panel" class="access-panel canva-panel" hidden>
+    <h2>Pengaturan aksesibilitas</h2>
+    <div class="access-actions"><button id="text-smaller" type="button" class="btn secondary canva-button">Perkecil teks</button><button id="text-larger" type="button" class="btn secondary canva-button">Perbesar teks</button><button id="contrast-toggle" type="button" class="btn secondary canva-button" aria-pressed="false">Kontras tinggi: mati</button><button id="motion-toggle" type="button" class="btn secondary canva-button" aria-pressed="false">Kurangi animasi: mati</button><button id="reader-toggle" type="button" class="btn secondary canva-button" aria-pressed="false">Mode ramah pembaca: mati</button><button id="access-close" type="button" class="btn secondary canva-button">Tutup aksesibilitas</button>
+    </div>
+    <p>Fitur ini membantu akses. Kamu tetap dapat menyesuaikan pembaca layar dan pengaturan sistem pada perangkatmu.</p>
    </div>
   </header>
-  <main class="shell">
+  <main id="konten-utama" class="shell" tabindex="-1">
    <section id="home" class="view active canva-section">
     <div class="hero canva-banner">
      <div>
       <span class="eyebrow canva-tag">✦ Petualangan belajar yang menyenangkan</span>
       <h1>Ayo Belajar Al-Qur'an dan Hadis!</h1>
       <p>Kenali huruf hijaiyah, pelajari pesan surah pendek dan hadis, lalu coba permainan seru. Yuk, belajar sedikit demi sedikit!</p><button class="btn gold canva-button" data-view="quran">Mulai Belajar <i data-lucide="arrow-right"></i></button>
+     </div>
+     <div class="hero-photo-wrap"><img id="hero-children-image" class="hero-photo canva-image" src="https://images.pexels.com/photos/35105938/pexels-photo-35105938.jpeg" alt="Three children reading the Quran together, wearing traditional outfits." loading="lazy">
      </div>
      <svg class="hero-art" viewbox="0 0 520 390" role="img" aria-label="Ilustrasi kartun dua anak muslim mengaji bersama guru">
       <ellipse cx="264" cy="354" rx="226" ry="26" fill="#b6e7cf" /><circle cx="438" cy="63" r="24" fill="#ffe49b" /><path d="M62 319Q30 285 66 255Q75 226 109 237Q141 247 135 280Q157 318 120 335Z" fill="#86d6ab" /><path d="M409 300Q395 251 433 240Q477 238 477 292Q498 323 458 338Z" fill="#9eddb5" /> <rect x="116" y="196" width="125" height="146" rx="56" fill="#e9ac58" /><circle cx="179" cy="152" r="57" fill="#f7d2a8" /><path d="M120 151Q111 84 177 81Q246 85 238 150L225 132Q179 104 132 139Z" fill="#276e69" /><path d="M118 141Q105 103 145 81Q129 113 136 144Z" fill="#276e69" /><circle cx="159" cy="157" r="3.5" fill="#354a42" /><circle cx="199" cy="157" r="3.5" fill="#354a42" /><path d="M167 178Q179 189 193 177" fill="none" stroke="#aa7561" stroke-width="3" stroke-linecap="round" /> <rect x="275" y="198" width="133" height="147" rx="62" fill="#8cbbef" /><circle cx="342" cy="155" r="54" fill="#f3c99d" /><path d="M287 159Q280 88 344 84Q407 88 398 164Q380 132 343 126Q311 126 287 159" fill="#f5f2e8" /><path d="M286 153Q276 116 303 91Q285 133 303 177L286 192Z" fill="#f5f2e8" /><circle cx="325" cy="158" r="3.5" fill="#354a42" /><circle cx="360" cy="158" r="3.5" fill="#354a42" /><path d="M331 178Q342 185 354 176" fill="none" stroke="#a67060" stroke-width="3" stroke-linecap="round" /> <path d="M143 288Q186 271 259 297L259 349Q181 321 143 340Z" fill="#fffdf6" stroke="#58a284" stroke-width="5" /><path d="M259 297Q332 271 376 288L376 340Q335 320 259 349Z" fill="#fffdf6" stroke="#58a284" stroke-width="5" /><path d="M259 300V348M172 308Q205 304 240 317M279 318Q317 304 349 308" fill="none" stroke="#9bc6ac" stroke-width="3" /> <circle cx="466" cy="147" r="27" fill="#fff7dc" /><text x="466" y="158" text-anchor="middle" font-size="27" fill="#cb9c3b">
@@ -48,7 +99,7 @@
      </div>
     </div>
     <div class="grid4">
-     <button class="card shortcut canva-card" data-view="quran"><span class="iconbox"><i data-lucide="book-open"></i></span><h3>Materi Al-Qur'an</h3><p>Huruf, harakat, surah, dan tajwid dasar.</p></button> <button class="card shortcut canva-card" data-view="hadith"><span class="iconbox"><i data-lucide="heart-handshake"></i></span><h3>Materi Hadis</h3><p>Empat teladan baik untuk sehari-hari.</p></button> <button class="card shortcut canva-card" data-view="games"><span class="iconbox"><i data-lucide="puzzle"></i></span><h3>Permainan</h3><p>Main sambil mengingat pelajaran.</p></button> <button class="card shortcut canva-card" data-view="evaluation"><span class="iconbox"><i data-lucide="award"></i></span><h3>Evaluasi</h3><p>Uji pemahamanmu dengan 20 soal.</p></button>
+     <button class="card shortcut canva-card" data-view="quran"><img id="shortcut-quran-image" class="shortcut-image canva-image" src="https://images.pexels.com/photos/28823663/pexels-photo-28823663.jpeg" alt="Qur'an on a wooden stand in a mosque, symbolizing Islamic faith and spirituality." loading="lazy"><span class="iconbox"><i data-lucide="book-open"></i></span><h3>Materi Al-Qur'an</h3><p>Huruf, harakat, surah, dan tajwid dasar.</p></button> <button class="card shortcut canva-card" data-view="hadith"><img id="shortcut-hadith-image" class="shortcut-image canva-image" src="https://images.pexels.com/photos/36169327/pexels-photo-36169327.jpeg" alt="Captivating view of mosque minaret and dome under golden light in Sharjah, UAE at daytime." loading="lazy"><span class="iconbox"><i data-lucide="heart-handshake"></i></span><h3>Materi Hadis</h3><p>Empat teladan baik untuk sehari-hari.</p></button> <button class="card shortcut canva-card" data-view="games"><img id="shortcut-games-image" class="shortcut-image canva-image" src="https://images.pexels.com/photos/40449070/pexels-photo-40449070.jpeg" alt="Decorative Quran with prayer beads and flowers on a colorful mat." loading="lazy"><span class="iconbox"><i data-lucide="puzzle"></i></span><h3>Permainan</h3><p>Main sambil mengingat pelajaran.</p></button> <button class="card shortcut canva-card" data-view="evaluation"><img id="shortcut-evaluation-image" class="shortcut-image canva-image" src="https://images.pexels.com/photos/19447480/pexels-photo-19447480.jpeg" alt="Elegant view of Nuruosmaniye Mosque's courtyard, showcasing Ottoman architecture in Istanbul, Turkey." loading="lazy"><span class="iconbox"><i data-lucide="award"></i></span><h3>Evaluasi</h3><p>Uji pemahamanmu dengan 20 soal.</p></button>
     </div>
     <div class="stats">
      <div class="stat canva-panel">
@@ -144,22 +195,279 @@
       </div>
      </div>
     </div>
-    <div id="topic-5" class="topic panel canva-panel">
-     <h2>Tajwid dasar</h2>
-     <p>Tajwid membantu kita membaca Al-Qur'an dengan baik. Ini pengenalan awal; latihan bunyi yang tepat tetap dilakukan bersama guru.</p>
-     <div class="two-col">
-      <div class="mini canva-card">
-       <h3>Mad dasar</h3>
-       <p>Mad berarti bacaan dipanjangkan. Contoh <b>huruf latihan</b>: <span class="arabic" lang="ar">بَا</span> dibaca panjang. Ini bukan kutipan ayat.</p>
-      </div>
-      <div class="mini canva-card">
-       <h3>Qalqalah</h3>
-       <p>Beberapa huruf dibaca dengan pantulan saat sukun: <span class="arabic" lang="ar">ق ط ب ج د</span>. Contoh <b>huruf latihan</b>: <span class="arabic" lang="ar">بْ</span>.</p>
-      </div>
+    <div id="topic-5" class="topic panel canva-panel taj-module">
+     <h2>Modul Tajwid</h2>
+     <div class="taj-intro canva-panel">
+      <p>Tajwid membantu kita membaca Al-Qur'an dengan baik. Ringkasan kaidah ini disusun dari materi Kementerian Agama RI untuk latihan dengan konteks bacaan <strong>riwayat Hafs dari ‘Ashim</strong>. Panjang bacaan dihitung dalam satuan <strong>harakat</strong>.</p>
+      <p>Mulailah dari satu kategori, baca contoh Arab berharakat, lalu ikuti cara membacanya. Pelafalan sebaiknya dikonfirmasi bersama guru PAI atau guru mengaji.</p>
      </div>
-     <div class="note">
-      Dengarkan contoh bacaan langsung dari guru untuk membedakan bunyinya.
+     <div class="tajwid-legend canva-panel" aria-label="Legenda warna tajwid"><strong>Legenda warna pada ayat dan kartu</strong><span class="tajwid-key" style="--rule-color:#d9ecff"><i aria-hidden="true"></i>Mad · panjang</span><span class="tajwid-key" style="--rule-color:#ffe1d4"><i aria-hidden="true"></i>Qalqalah · pantul</span><span class="tajwid-key" style="--rule-color:#eadcfa"><i aria-hidden="true"></i>Ghunnah · dengung</span><span class="tajwid-key" style="--rule-color:#fff0bd"><i aria-hidden="true"></i>Ikhfa · samar</span><span class="tajwid-key" style="--rule-color:#d2f2df"><i aria-hidden="true"></i>Idgam · lebur</span><span class="tajwid-key" style="--rule-color:#ffdfeb"><i aria-hidden="true"></i>Izhar · jelas</span>
      </div>
+     <nav id="taj-category-nav" class="taj-category-nav canva-tabs" aria-label="Kategori tajwid"><button type="button" class="active canva-button" data-taj="0" aria-current="true">Nun Mati &amp; Tanwin</button><button type="button" class="canva-button" data-taj="1">Mim Mati</button><button type="button" class="canva-button" data-taj="2">Mad</button><button type="button" class="canva-button" data-taj="3">Qalqalah</button><button type="button" class="canva-button" data-taj="4">Lam Jalalah &amp; Alif Lam</button><button type="button" class="canva-button" data-taj="5">Waqaf &amp; Ibtida</button>
+     </nav>
+     <div id="taj-content" aria-live="polite">
+      <section id="taj-0" class="taj-category active canva-section">
+       <h3>1. Nun mati &amp; tanwin</h3>
+       <p>Hukum ini berlaku ketika <span class="arabic" lang="ar">نْ</span> atau tanwin <span class="arabic" lang="ar">ـً ـٍ ـٌ</span> bertemu huruf berikutnya.</p>
+       <div class="taj-grid">
+        <article class="taj-card canva-card" style="--rule-color:#ffdfeb">
+         <h4>Izhar halqi · jelas</h4>
+         <div class="taj-letters">
+          Huruf: <span class="arabic" lang="ar">ء ه ع ح غ خ</span>
+         </div>
+         <p>Nun dibaca jelas tanpa dengung tambahan.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar" dir="rtl">مِنْ هَادٍ</span>Min hādin: bunyi “n” terdengar jelas.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d2f2df">
+         <h4>Idgam bigunnah · lebur dan dengung</h4>
+         <div class="taj-letters">
+          Huruf: <span class="arabic" lang="ar">ي ن م و</span>
+         </div>
+         <p>Nun masuk ke huruf berikutnya dengan dengung sekitar 2 harakat.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar" dir="rtl">مَنْ يَعْمَلْ</span>Man ya‘mal: leburkan “n” ke “y” sambil mendengung.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d2f2df">
+         <h4>Idgam bilagunnah · lebur tanpa dengung</h4>
+         <div class="taj-letters">
+          Huruf: <span class="arabic" lang="ar">ل ر</span>
+         </div>
+         <p>Nun masuk ke huruf berikutnya tanpa dengung.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar" dir="rtl">مِنْ رَبِّهِمْ</span>Min rabbihim: leburkan “n” ke “r” tanpa dengung.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#eadcfa">
+         <h4>Iqlab · berubah menjadi mim</h4>
+         <div class="taj-letters">
+          Huruf: <span class="arabic" lang="ar">ب</span>
+         </div>
+         <p>Bunyi nun berubah menjadi mim samar dengan dengung sekitar 2 harakat.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar" dir="rtl">مِنْ بَعْدِ</span>Min ba‘di: bunyikan seperti mim samar sebelum “b”.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#fff0bd">
+         <h4>Ikhfa haqiqi · samar</h4>
+         <div class="taj-letters">
+          Huruf: <span class="arabic" lang="ar">ت ث ج د ذ ز س ش ص ض ط ظ ف ق ك</span>
+         </div>
+         <p>Nun dibaca samar antara jelas dan melebur, dengan dengung sekitar 2 harakat.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar" dir="rtl">مِنْ شَرٍّ</span>Min syarrin: samarkan “n” sambil mendengung sebelum “sy”.
+         </div>
+        </article>
+       </div>
+       <p class="note"><strong>Pengecualian izhar mutlak:</strong> jika <span lang="ar" class="arabic">نْ</span> bertemu <span lang="ar" class="arabic">و</span> atau <span lang="ar" class="arabic">ي</span> dalam satu kata, seperti <span lang="ar" class="arabic">الدُّنْيَا</span> dan <span lang="ar" class="arabic">بُنْيَانٌ</span>, nun dibaca jelas, bukan idgam.</p>
+      </section>
+      <section id="taj-1" class="taj-category canva-section">
+       <h3>2. Mim mati</h3>
+       <p>Perhatikan huruf sesudah <span class="arabic" lang="ar">مْ</span> dan bagaimana bibir membentuk bunyi mim.</p>
+       <div class="taj-grid">
+        <article class="taj-card canva-card" style="--rule-color:#fff0bd">
+         <h4>Ikhfa syafawi</h4>
+         <p><span class="arabic" lang="ar">مْ + ب</span> dibaca samar pada bibir dengan dengung sekitar 2 harakat.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar" dir="rtl">تَرْمِيهِمْ بِحِجَارَةٍ</span>Tarmīhim biḥijāratin: samarkan mim sebelum ba.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d2f2df">
+         <h4>Idgam mimi</h4>
+         <p><span class="arabic" lang="ar">مْ + م</span>: mim pertama masuk ke mim berikutnya dengan dengung.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar" dir="rtl">لَكُمْ مَا</span>Lakum mā: leburkan kedua mim dengan dengung.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#ffdfeb">
+         <h4>Izhar syafawi</h4>
+         <p><span class="arabic" lang="ar">مْ</span> bertemu selain <span lang="ar">ب</span> dan <span lang="ar">م</span>: mim dibaca jelas dengan kedua bibir.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar" dir="rtl">عَلَيْهِمْ غَيْرِ</span>‘Alaihim gairi: bunyikan mim dengan jelas.
+         </div>
+        </article>
+       </div>
+       <p class="note">Perjelas mim mati terutama ketika bertemu <span class="arabic" lang="ar">و</span> atau <span class="arabic" lang="ar">ف</span>, agar tidak terdengar samar.</p>
+      </section>
+      <section id="taj-2" class="taj-category canva-section">
+       <h3>3. Mad · bacaan panjang</h3>
+       <p>Huruf mad adalah <span class="arabic" lang="ar">ا</span> sesudah fathah, <span class="arabic" lang="ar">وْ</span> sesudah damah, dan <span class="arabic" lang="ar">يْ</span> sesudah kasrah. Hitung panjangnya dengan harakat.</p>
+       <div class="taj-grid">
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad tabi‘i / asli</h4>
+         <p>Tanpa sebab tambahan; <b>2 harakat</b>.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">قَالَ، يَقُولُ، قِيلَ</span>Panjangkan bunyi ā, ū, atau ī dua ketukan.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad wajib muttasil</h4>
+         <p>Huruf mad bertemu hamzah dalam satu kata; umumnya <b>4–5 harakat</b>.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">جَاءَ</span>Jā’a: panjangkan sebelum hamzah.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad jaiz munfasil</h4>
+         <p>Mad di akhir kata bertemu hamzah di awal kata berikutnya; umumnya <b>2, 4, atau 5 harakat</b> sesuai jalur bacaan.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">يَا أَيُّهَا</span>Yā ayyuhā: panjangkan “yā” saat disambung.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad badal</h4>
+         <p>Hamzah mendahului huruf mad dalam satu kata; <b>2 harakat</b>.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">آمَنُوا</span>Āmanū: panjangkan bunyi awal.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad ‘arid lissukun</h4>
+         <p>Mad diikuti huruf yang menjadi sukun karena berhenti; <b>2, 4, atau 6 harakat</b>.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">الْعَالَمِينَ</span>Al-‘ālamīn: saat berhenti, panjangkan bunyi akhir.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad lin</h4>
+         <p><span lang="ar">وْ</span> atau <span lang="ar">يْ</span> sesudah fathah, diikuti huruf yang menjadi sukun karena berhenti; <b>2, 4, atau 6 harakat</b>.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">خَوْفٍ</span>Khauf: saat berhenti, lembutkan dan panjangkan bunyi “au”.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad ‘iwad</h4>
+         <p>Berhenti pada fathatain; biasanya <b>2 harakat</b>.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">عَلِيمًا</span>Ketika berhenti dibaca ‘alīmā.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad lazim kalimi mutsaqqal</h4>
+         <p>Mad bertemu huruf bertasydid dalam satu kata; <b>6 harakat</b>.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">الضَّالِّينَ</span>Aḍ-ḍāllīn: panjangkan sebelum lam bertasydid.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad lazim kalimi mukhaffaf</h4>
+         <p>Mad bertemu sukun asli tanpa tasydid dalam satu kata; <b>6 harakat</b>.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">آلْآنَ</span>Āl-āna: panjangkan sebelum sukun asli.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad lazim harfi</h4>
+         <p>Pada huruf pembuka surah tertentu yang ejaan nama hurufnya memenuhi syarat; <b>6 harakat</b>.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">المٓ</span>Huruf <span lang="ar">ل</span> dan <span lang="ar">م</span> dibaca panjang pada ejaan nama hurufnya.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad silah qasirah</h4>
+         <p>Ha dhamir berharakat di antara dua huruf berharakat tanpa hamzah sesudahnya; <b>2 harakat</b> ketika disambung.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">إِنَّهُ كَانَ</span>Innahū kāna: panjangkan bunyi “hu” saat disambung.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d9ecff">
+         <h4>Mad silah tawilah</h4>
+         <p>Ha dhamir memenuhi syarat silah dan diikuti hamzah; umumnya <b>4–5 harakat</b> ketika disambung.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">بِهِ أَحَدًا</span>Bihī aḥadan: panjangkan bunyi “hi” sebelum hamzah.
+         </div>
+        </article>
+       </div>
+       <p class="note"><strong>Ingat:</strong> ta marbutah bertanwin fathah seperti <span class="arabic" lang="ar">رَحْمَةً</span> tidak dibaca menjadi alif ketika berhenti. Beberapa panjang mad memiliki rincian menurut jalur riwayat; ikuti guru dan mushaf yang digunakan.</p>
+      </section>
+      <section id="taj-3" class="taj-category canva-section">
+       <h3>4. Qalqalah</h3>
+       <p>Huruf qalqalah: <span class="arabic" lang="ar">ق ط ب ج د</span>. Ketika sukun, bunyi dipantulkan tanpa menambahkan vokal penuh.</p>
+       <div class="taj-grid">
+        <article class="taj-card canva-card" style="--rule-color:#ffe1d4">
+         <h4>Qalqalah sugra</h4>
+         <p>Huruf qalqalah sukun asli di tengah bacaan.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">يَجْعَلْ</span>Yaj‘al: pantulkan jim sukun dengan singkat.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#ffe1d4">
+         <h4>Qalqalah kubra</h4>
+         <p>Huruf qalqalah di akhir kata menjadi sukun karena berhenti.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">أَحَدٌ</span>Aḥad: saat diwaqafkan, pantulkan dal di akhir.
+         </div>
+        </article>
+       </div>
+       <p class="note">Sebagian buku juga menyebut <strong>qalqalah akbar</strong> untuk huruf akhir bertasydid ketika berhenti.</p>
+      </section>
+      <section id="taj-4" class="taj-category canva-section">
+       <h3>5. Lam jalalah &amp; alif lam</h3>
+       <div class="taj-grid">
+        <article class="taj-card canva-card">
+         <h4>Lam jalalah · tafkhim</h4>
+         <p>Lam pada lafaz Allah dibaca tebal jika sebelumnya fathah atau damah.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">قَالَ اللّٰهُ</span>Qāla-llāhu: tebalkan lam pada Allah.
+         </div>
+        </article>
+        <article class="taj-card canva-card">
+         <h4>Lam jalalah · tarqiq</h4>
+         <p>Lam pada lafaz Allah dibaca tipis jika sebelumnya kasrah.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">بِسْمِ اللّٰهِ</span>Bismi-llāhi: tipiskan lam pada Allah.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#ffdfeb">
+         <h4>Alif lam qamariyah</h4>
+         <div class="taj-letters">
+          Huruf: <span class="arabic" lang="ar">ا ب ج ح خ ع غ ف ق ك م هـ و ي</span>
+         </div>
+         <p>Lam dibaca jelas.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">الْقَمَرُ</span>Al-qamaru: bunyikan lam dengan jelas.
+         </div>
+        </article>
+        <article class="taj-card canva-card" style="--rule-color:#d2f2df">
+         <h4>Alif lam syamsiyah</h4>
+         <div class="taj-letters">
+          Huruf: <span class="arabic" lang="ar">ت ث د ذ ر ز س ش ص ض ط ظ ل ن</span>
+         </div>
+         <p>Lam masuk ke huruf berikutnya; huruf berikutnya dibaca bertasydid.</p>
+         <div class="taj-example"><small>Contoh · cara membaca</small><span class="arabic" lang="ar">الشَّمْسُ</span>Asy-syamsu: leburkan lam ke syin.
+         </div>
+        </article>
+       </div>
+      </section>
+      <section id="taj-5" class="taj-category canva-section">
+       <h3>6. Waqaf &amp; ibtida</h3>
+       <p><strong>Waqaf</strong> adalah berhenti sejenak untuk bernapas dengan niat melanjutkan. <strong>Ibtida</strong> adalah memulai atau melanjutkan bacaan. Pilih tempat berhenti yang menjaga makna ayat.</p>
+       <div class="taj-table-wrap">
+        <table class="taj-table canva-table">
+         <thead>
+          <tr>
+           <th scope="col">Tanda</th>
+           <th scope="col">Nama</th>
+           <th scope="col">Cara membaca</th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td class="arabic" lang="ar">م</td>
+           <td>Waqaf lazim</td>
+           <td>Sebaiknya berhenti; menyambung dapat mengganggu makna.</td>
+          </tr>
+          <tr>
+           <td class="arabic" lang="ar">لا</td>
+           <td>Jangan berhenti</td>
+           <td>Jangan berhenti jika memungkinkan.</td>
+          </tr>
+          <tr>
+           <td class="arabic" lang="ar">ج</td>
+           <td>Jaiz</td>
+           <td>Boleh berhenti atau menyambung.</td>
+          </tr>
+          <tr>
+           <td class="arabic" lang="ar">قلى</td>
+           <td>Berhenti lebih utama</td>
+           <td>Boleh keduanya, berhenti lebih utama.</td>
+          </tr>
+          <tr>
+           <td class="arabic" lang="ar">صلى</td>
+           <td>Menyambung lebih utama</td>
+           <td>Boleh keduanya, menyambung lebih utama.</td>
+          </tr>
+          <tr>
+           <td class="arabic" lang="ar">∴ ∴</td>
+           <td>Waqaf mu‘anaqah</td>
+           <td>Berhenti pada salah satu tempat, bukan keduanya.</td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+       <p class="note">Jika terpaksa berhenti karena kehabisan napas pada tempat yang kurang tepat, ulangi dari bagian sebelumnya yang maknanya utuh saat melanjutkan. Tanda waqaf dapat berbeda antar-mushaf.</p>
+      </section>
+     </div>
+     <div class="controls"><button type="button" id="taj-prev" class="btn secondary canva-button">← Kategori sebelumnya</button><span id="taj-counter" class="tag canva-tag" aria-live="polite">1 dari 6 kategori</span><button type="button" id="taj-next" class="btn canva-button">Kategori berikutnya →</button>
+     </div>
+     <p class="note"><strong>Catatan verifikasi:</strong> Ringkasan ini adalah panduan belajar, bukan pengganti praktik. Makhraj, dengung, panjang bacaan, dan pelafalan perlu dipraktikkan serta dikonfirmasi bersama guru PAI atau guru mengaji. Cocokkan juga contoh dengan mushaf yang digunakan.</p>
     </div>
     <div class="controls"><button class="btn secondary canva-button" id="topic-prev">← Kembali</button><button class="btn canva-button" id="topic-next">Lanjut →</button>
     </div>
@@ -168,9 +476,10 @@
     <div class="page-top">
      <div>
       <h1 class="page-title">Materi Hadis</h1>
-      <p class="intro">Empat petikan hadis dan contoh perbuatan baik.</p>
+      <p class="intro">Lima petikan hadis dan contoh perbuatan baik.</p>
      </div><button class="btn secondary canva-button" data-view="quran">← Materi Al-Qur'an</button>
     </div>
+    <p class="hadith-glossary canva-panel"><strong>Kenali istilahnya:</strong> Sanad adalah rangkaian orang yang menyampaikan hadis. Matan adalah isi hadis.</p>
     <div id="hadith-list" class="hadith-grid"></div>
     <div class="controls"><button class="btn canva-button" data-view="games">Lanjut ke permainan →</button>
     </div>
@@ -264,6 +573,15 @@
   <script>
 (() => {
   const $ = id => document.getElementById(id);
+  const announce=document.createElement('div');announce.id='access-status';announce.setAttribute('role','status');announce.setAttribute('aria-live','polite');announce.style.cssText='position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)';document.body.append(announce);
+  const panel=$('access-panel'),toggle=$('access-toggle');
+  function setPanel(open){panel.hidden=!open;toggle.setAttribute('aria-expanded',String(open));announce.textContent=open?'Menu aksesibilitas terbuka':'Menu aksesibilitas tertutup';if(open)$('text-smaller').focus();else if(panel.contains(document.activeElement))toggle.focus()}
+  toggle.onclick=()=>setPanel(panel.hidden);$('access-close').onclick=()=>setPanel(false);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden){setPanel(false);toggle.focus()}});
+  let textScale=1;function resizeText(delta){textScale=Math.max(.85,Math.min(1.6,Math.round((textScale+delta)*100)/100));document.body.style.zoom=String(textScale);announce.textContent=`Ukuran teks ${Math.round(textScale*100)} persen`}
+  $('text-smaller').onclick=()=>resizeText(-.1);$('text-larger').onclick=()=>resizeText(.1);
+  [['contrast-toggle','high-contrast','Kontras tinggi'],['motion-toggle','reduce-motion','Kurangi animasi'],['reader-toggle','reader-mode','Mode ramah pembaca']].forEach(([id,cls,label])=>{$(id).onclick=()=>{const on=document.body.classList.toggle(cls);$(id).setAttribute('aria-pressed',String(on));$(id).textContent=`${label}: ${on?'aktif':'mati'}`;announce.textContent=$(id).textContent}});
+  document.querySelector('.skip-link').addEventListener('click',()=>setTimeout(()=>$('konten-utama').focus(),0));
   const letters=[['ا','Alif'],['ب','Ba'],['ت','Ta'],['ث','Tsa'],['ج','Jim'],['ح','Ha'],['خ','Kha'],['د','Dal'],['ذ','Dzal'],['ر','Ra'],['ز','Zai'],['س','Sin'],['ش','Syin'],['ص','Shad'],['ض','Dhad'],['ط','Tha'],['ظ','Zha'],['ع','Ain'],['غ','Ghain'],['ف','Fa'],['ق','Qaf'],['ك','Kaf'],['ل','Lam'],['م','Mim'],['ن','Nun'],['و','Wau'],['ه','Ha'],['لا','Lam-Alif'],['ء','Hamzah'],['ي','Ya']];
   const topics=['Hijaiyah','Harakat','Al-Fatihah','Surah pendek','Pesan surah','Tajwid'];
   const messages=['Memuji Allah dan memohon petunjuk','Allah Maha Esa','Memohon perlindungan Allah dari kejahatan','Memohon perlindungan Allah dari bisikan jahat'];
@@ -274,11 +592,88 @@
     {id:'falaq',name:'Al-Falaq',message:'Memohon perlindungan Allah dari kejahatan.',verses:['قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ','مِنْ شَرِّ مَا خَلَقَ','وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ','وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ','وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ']},
     {id:'nas',name:'An-Nas',message:'Memohon perlindungan Allah dari bisikan jahat.',verses:['قُلْ أَعُوذُ بِرَبِّ النَّاسِ','مَلِكِ النَّاسِ','إِلَٰهِ النَّاسِ','مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ','الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ','مِنَ الْجِنَّةِ وَالنَّاسِ']}
   ];
+  const fatihahMeanings=[
+    'Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang.',
+    'Segala puji bagi Allah, Tuhan semesta alam',
+    'Yang Maha Pengasih lagi Maha Penyayang,',
+    'Pemilik hari Pembalasan.',
+    'Hanya kepada Engkaulah kami menyembah dan hanya kepada Engkaulah kami memohon pertolongan.',
+    'Bimbinglah kami ke jalan yang lurus,',
+    '(yaitu) jalan orang-orang yang telah Engkau beri nikmat, bukan (jalan) mereka yang dimurkai dan bukan (pula jalan) orang-orang yang sesat.'
+  ];
+  const nasMeanings=[
+    'Katakanlah (Nabi Muhammad), “Aku berlindung kepada Tuhan manusia,',
+    'raja manusia,',
+    'sembahan manusia',
+    'dari kejahatan (setan) pembisik yang bersembunyi',
+    'yang membisikkan (kejahatan) ke dalam dada manusia,',
+    'dari (golongan) jin dan manusia.”'
+  ];
+  const falaqMeanings=[
+    'Katakanlah (Nabi Muhammad), “Aku berlindung kepada Tuhan yang (menjaga) fajar (subuh)',
+    'dari kejahatan (makhluk yang) Dia ciptakan,',
+    'dari kejahatan malam apabila telah gelap gulita,',
+    'dari kejahatan perempuan-perempuan (penyihir) yang meniup pada buhul-buhul (talinya),',
+    'dan dari kejahatan orang yang dengki apabila dia dengki.”'
+  ];
+  const ikhlasMeanings=[
+    'Allah tempat meminta segala sesuatu.',
+    'Allah tempat meminta segala sesuatu.',
+    'Dia tidak beranak dan tidak pula diperanakkan',
+    'serta tidak ada sesuatu pun yang setara dengan-Nya.”'
+  ];
   const arabicNumbers=['١','٢','٣','٤','٥','٦','٧'];
   const nuUrls={fatihah:'https://quran.nu.or.id/al-fatihah',ikhlas:'https://quran.nu.or.id/al-ikhlash',falaq:'https://quran.nu.or.id/al-falaq',nas:'https://quran.nu.or.id/an-nas'};
-  function renderSurah(s){return `<article id="surah-card-${s.id}" class="surah-card canva-card"><div class="surah-head"><h3>Surah ${s.name}</h3><span class="tag canva-tag">${s.verses.length} ayat</span></div><p><strong>Pesan sederhana:</strong> ${s.message}</p><div class="surah-actions"><button type="button" class="btn secondary small canva-button" data-surah-toggle="${s.id}" aria-expanded="true" aria-controls="surah-verses-${s.id}">Sembunyikan ayat</button><button type="button" class="btn secondary small canva-button" data-surah-copy="${s.id}">Salin teks Arab</button></div><div id="surah-verses-${s.id}" class="surah-verses">${s.verses.map((v,i)=>`<div class="verse-pair"><p class="verse-arabic" dir="rtl" lang="ar">${arabicNumbers[i]}. ${v}</p><p id="meaning-${s.id}-${i}" class="verse-meaning pending" lang="id"><strong>Artinya:</strong> Terjemahan dari sumber alternatif belum dapat dimuat</p></div>`).join('')}</div><p id="translation-status-${s.id}" class="source" role="status" aria-live="polite">Terjemahan dari sumber alternatif belum dapat dimuat</p><button type="button" class="btn secondary small canva-button" data-translation-retry="${s.id}">Muat ulang</button><p class="source">Arti ayat bersumber dari Quran NU Online dan dapat diperiksa melalui tautan sumber.</p><p class="source">Sumber verifikasi: <a class="canva-link" href="${nuUrls[s.id]}" target="_blank" rel="noopener noreferrer">Quran NU Online, ${s.name} ↗</a></p><p id="surah-status-${s.id}" class="surah-status" role="status" aria-live="polite"></p></article>`}
-  $('surah-fatihah').innerHTML=renderSurah(surahTexts[0]);
-  $('short-surahs').innerHTML=surahTexts.slice(1).map(renderSurah).join('');
+  const latinVerses={
+    fatihah:['Bismillāhir-raḥmānir-raḥīm','Al-ḥamdu lillāhi rabbil-‘ālamīn','Ar-raḥmānir-raḥīm','Māliki yaumid-dīn','Iyyāka na‘budu wa iyyāka nasta‘īn','Ihdinaṣ-ṣirāṭal-mustaqīm','Ṣirāṭal-lażīna an‘amta ‘alaihim gairil-magḍūbi ‘alaihim wa laḍ-ḍāllīn'],
+    ikhlas:['Qul huwallāhu aḥad','Allāhuṣ-ṣamad','Lam yalid wa lam yūlad','Wa lam yakul lahū kufuwan aḥad'],
+    falaq:['Qul a‘ūżu birabbil-falaq','Min syarri mā khalaq','Wa min syarri gāsiqin iżā waqab','Wa min syarrin-naffāṡāti fil-‘uqad','Wa min syarri ḥāsidin iżā ḥasad'],
+    nas:['Qul a‘ūżu birabbin-nās','Malikin-nās','Ilāhin-nās','Min syarril-waswāsil-khannās','Allażī yuwaswisu fī ṣudūrin-nās','Minal-jinnati wan-nās']
+  };
+  // Contoh yang jelas pada teks ini saja; jangan menebak hukum dari kemiripan huruf.
+  const tajwidRules=[
+    {name:'ikhfa',label:'Ikhfa · samar',parts:['نْ شَ']},
+    {name:'izhar',label:'Izhar · jelas',parts:['نْعَ','قٍ إِ','دٍ إِ']},
+    {name:'idgham',label:'Idgham · lebur',parts:['نْ لَ']},
+    {name:'ghunnah',label:'Ghunnah · dengung',parts:['نَّ','نِّ']},
+    {name:'qalqalah',label:'Qalqalah · pantul',parts:['دْ']},
+    {name:'mad',label:'Mad · panjang',parts:['مَٰ','مَا','لَا','فِي','دُو','عُو','نَا','رَا','ذِي','عَا','مَالِ','إِي','عِينُ','يُو','غَا','حَا','وَا','صُدُو','ضَّا','إِلَٰ','لِّي']}
+  ];
+  function colorVerse(text,surahId,verseIndex){
+    // Segment by written Arabic character so a harakat never gets separated from its letter.
+    const glyphs=[...new Intl.Segmenter('ar',{granularity:'grapheme'}).segment(text)];
+    const boundaries=new Set(glyphs.flatMap(g=>[g.index,g.index+g.segment.length]));
+    const marks=Array(glyphs.length).fill(null);
+    const waqafTargets={ikhlas:{0:'د',1:'د',3:'د'},falaq:{0:'ق',1:'ق',2:'ب',3:'د',4:'د'}};
+    const waqafLetter=waqafTargets[surahId]?.[verseIndex];
+    tajwidRules.forEach(rule=>rule.parts.forEach(part=>{
+      let at=0;
+      while((at=text.indexOf(part,at))!==-1){
+        const end=at+part.length;
+        if(boundaries.has(at)&&boundaries.has(end)){
+          const indices=glyphs.map((g,i)=>g.index>=at&&g.index<end?i:-1).filter(i=>i>=0);
+          if(indices.every(i=>marks[i]===null))indices.forEach(i=>marks[i]=rule.name);
+        }
+        at=end;
+      }
+    }));
+    if(waqafLetter){
+      const last=glyphs.length-1;
+      if(glyphs[last]?.segment.startsWith(waqafLetter))marks[last]='qalqalah-kubra';
+    }
+    let html='';
+    for(let i=0;i<glyphs.length;){let end=i+1;while(end<glyphs.length&&marks[end]===marks[i])end++;
+      const chunk=glyphs.slice(i,end).map(g=>g.segment).join('');
+      const label=marks[i]==='qalqalah-kubra'?'Qalqalah kubra · pantul saat waqaf':tajwidRules.find(r=>r.name===marks[i])?.label;
+      html+=marks[i]?`<span class="tajwid-${marks[i]}" data-rule="${label}" aria-label="${chunk}, hukum ${label}">${chunk}</span>`:chunk;i=end;
+    }
+    return html;
+  }
+  const usedRules=new Set(surahTexts.flatMap(s=>s.verses).flatMap(v=>[...colorVerse(v).matchAll(/class="tajwid-([a-z]+)"/g)].map(m=>m[1])));
+  const tajwidLegend=`<div class="tajwid-legend canva-panel" aria-label="Legenda warna tajwid"><strong>Kenali warna tajwid</strong>${tajwidRules.filter(r=>usedRules.has(r.name)).map(r=>`<span class="tajwid-key" style="--rule-color:${({mad:'#d9ecff',qalqalah:'#ffe1d4',ghunnah:'#eadcfa',ikhfa:'#fff0bd',idgham:'#d2f2df',izhar:'#ffdfeb'})[r.name]}"><i class="tajwid-${r.name}" aria-hidden="true"></i>${r.label}</span>`).join('')}</div><p class="note tajwid-note">Pewarnaan ini adalah panduan belajar yang sebaiknya dikonfirmasi bersama guru PAI atau guru mengaji.</p>`;
+  function renderSurah(s){return `<article id="surah-card-${s.id}" class="surah-card canva-card"><div class="surah-head"><h3>Surah ${s.name}</h3><span class="tag canva-tag">${s.verses.length} ayat</span></div><p><strong>Pesan sederhana:</strong> ${s.message}</p><div class="surah-actions"><button type="button" class="btn secondary small canva-button" data-surah-toggle="${s.id}" aria-expanded="true" aria-controls="surah-verses-${s.id}">Sembunyikan ayat</button><button type="button" class="btn secondary small canva-button" data-surah-copy="${s.id}">Salin teks Arab</button></div><div id="surah-verses-${s.id}" class="surah-verses">${s.verses.map((v,i)=>`<div class="verse-pair"><p class="verse-arabic" dir="rtl" lang="ar">${arabicNumbers[i]}. ${colorVerse(v,s.id,i)}</p><p class="verse-latin" lang="id"><strong>Latin:</strong> ${latinVerses[s.id][i]}</p><p id="meaning-${s.id}-${i}" class="verse-meaning${s.id==='fatihah'||s.id==='nas'||s.id==='falaq'||s.id==='ikhlas'?'':' pending'}" lang="id"><strong>Artinya:</strong> ${s.id==='fatihah'?fatihahMeanings[i]:s.id==='nas'?nasMeanings[i]:s.id==='falaq'?falaqMeanings[i]:s.id==='ikhlas'?ikhlasMeanings[i]:'Terjemahan dari sumber alternatif belum dapat dimuat'}</p></div>`).join('')}</div>${s.id==='fatihah'?'':s.id==='nas'?'':s.id==='falaq'?'':s.id==='ikhlas'?'':`<p id="translation-status-${s.id}" class="source" role="status" aria-live="polite">Terjemahan dari sumber alternatif belum dapat dimuat</p><button type="button" class="btn secondary small canva-button" data-translation-retry="${s.id}">Muat ulang</button><p class="source">Arti ayat bersumber dari Quran NU Online dan dapat diperiksa melalui tautan sumber.</p>`}<p class="source">Sumber verifikasi: <a class="canva-link" href="${nuUrls[s.id]}" target="_blank" rel="noopener noreferrer">Quran NU Online, ${s.name} ↗</a></p><p id="surah-status-${s.id}" class="surah-status" role="status" aria-live="polite"></p></article>`}
+  $('surah-fatihah').innerHTML=tajwidLegend+renderSurah(surahTexts[0]);
+  $('short-surahs').innerHTML=tajwidLegend+surahTexts.slice(1).map(renderSurah).join('');
   async function loadNuTranslation(s){
     const status=$('translation-status-'+s.id),retry=document.querySelector(`[data-translation-retry="${s.id}"]`);
     status.textContent='Memuat terjemahan dari Quran NU Online…';retry.disabled=true;
@@ -297,7 +692,7 @@
     }catch(error){status.textContent='Terjemahan dari sumber alternatif belum dapat dimuat';s.verses.forEach((_,i)=>{const el=$(`meaning-${s.id}-${i}`);el.innerHTML='<strong>Artinya:</strong> Terjemahan dari sumber alternatif belum dapat dimuat';el.classList.add('pending')})}
     finally{retry.disabled=false}
   }
-  surahTexts.forEach(loadNuTranslation);
+  surahTexts.filter(s=>s.id!=='fatihah'&&s.id!=='nas'&&s.id!=='falaq'&&s.id!=='ikhlas').forEach(loadNuTranslation);
   $('quran').addEventListener('click',e=>{const retry=e.target.closest('[data-translation-retry]');if(retry){const s=surahTexts.find(item=>item.id===retry.dataset.translationRetry);if(s)loadNuTranslation(s)}});
   $('quran').addEventListener('click',e=>{const toggle=e.target.closest('[data-surah-toggle]');if(toggle){const verses=$('surah-verses-'+toggle.dataset.surahToggle);verses.hidden=!verses.hidden;toggle.setAttribute('aria-expanded',String(!verses.hidden));toggle.textContent=verses.hidden?'Tampilkan ayat':'Sembunyikan ayat';return}const copy=e.target.closest('[data-surah-copy]');if(copy){const s=surahTexts.find(item=>item.id===copy.dataset.surahCopy);const status=$('surah-status-'+s.id);const field=document.createElement('textarea');field.value=s.verses.map((v,i)=>`${arabicNumbers[i]}. ${v}`).join('\n');field.style.position='fixed';field.style.opacity='0';document.body.appendChild(field);field.select();try{status.textContent=document.execCommand('copy')?'Teks Arab berhasil disalin.':'Tidak dapat menyalin teks pada perangkat ini.'}catch(err){status.textContent='Tidak dapat menyalin teks pada perangkat ini.'}field.remove()}});
   let currentTopic=0, flash=0, gameFlash=0, gameScore=0, guessIndex=0, practiceIndex=0;
@@ -306,13 +701,19 @@
   const earned=new Set();
   function refreshStats(){ $('home-progress').textContent=`${visited.size} dari 6 topik`; $('home-progress-bar').style.width=`${visited.size/6*100}%`; $('letter-progress').textContent=`${seenLetters.size} dari ${letters.length} kartu`; $('letter-progress-bar').style.width=`${seenLetters.size/letters.length*100}%`; $('home-score').textContent=`${gameScore} poin`; $('game-score').textContent=`Skor: ${gameScore} poin`; }
   function point(key){if(!earned.has(key)){earned.add(key);gameScore+=10;refreshStats()}}
-  function showView(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('[data-view]').forEach(b=>{if(b.closest('.nav')) b.classList.toggle('active',b.dataset.view===id)});if(id==='quran')showTopic(currentTopic);window.scrollTo({top:0,behavior:'smooth'})}
+  function showView(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('[data-view]').forEach(b=>{if(b.closest('.nav')){b.classList.toggle('active',b.dataset.view===id);b.setAttribute('aria-current',b.dataset.view===id?'page':'false')}});if(id==='quran')showTopic(currentTopic);announce.textContent=`Halaman ${$(id).querySelector('h1')?.textContent||'Beranda'} ditampilkan`;$(id).querySelector('h1')?.setAttribute('tabindex','-1');$(id).querySelector('h1')?.focus();window.scrollTo({top:0,behavior:document.body.classList.contains('reduce-motion')||matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})}
   document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.view)));
   $('topic-nav').innerHTML=topics.map((t,i)=>`<button class="canva-button" data-topic="${i}">${i+1}. ${t}</button>`).join('');
-  function showTopic(i){currentTopic=i;visited.add(i);document.querySelectorAll('.topic').forEach((el,n)=>el.classList.toggle('active',n===i));document.querySelectorAll('[data-topic]').forEach((b,n)=>b.classList.toggle('active',n===i));$('topic-count').textContent=`Topik ${i+1} dari 6`;$('topic-prev').textContent=i===0?'← Beranda':'← Kembali';$('topic-next').textContent=i===5?'Lanjut ke hadis →':'Lanjut →';refreshStats()}
+  function showTopic(i){currentTopic=i;visited.add(i);document.querySelectorAll('.topic').forEach((el,n)=>el.classList.toggle('active',n===i));document.querySelectorAll('[data-topic]').forEach((b,n)=>b.classList.toggle('active',n===i));$('topic-count').textContent=`Topik ${i+1} dari 6`;announce.textContent=`Topik ${i+1} dari 6: ${topics[i]}`;document.querySelectorAll('[data-topic]').forEach((b,n)=>b.setAttribute('aria-pressed',String(n===i)));$('topic-prev').textContent=i===0?'← Beranda':'← Kembali';$('topic-next').textContent=i===5?'Lanjut ke hadis →':'Lanjut →';refreshStats()}
   $('topic-nav').addEventListener('click',e=>{const b=e.target.closest('[data-topic]');if(b)showTopic(+b.dataset.topic)});
   $('topic-prev').onclick=()=>currentTopic?showTopic(currentTopic-1):showView('home');
   $('topic-next').onclick=()=>currentTopic<5?showTopic(currentTopic+1):showView('hadith');
+  let currentTaj=0;
+  function showTaj(i){currentTaj=i;document.querySelectorAll('.taj-category').forEach((section,n)=>section.classList.toggle('active',n===i));document.querySelectorAll('[data-taj]').forEach((button,n)=>{button.classList.toggle('active',n===i);if(n===i)button.setAttribute('aria-current','true');else button.removeAttribute('aria-current')});$('taj-counter').textContent=`${i+1} dari 6 kategori`;announce.textContent=`Kategori tajwid ${i+1} dari 6: ${document.querySelectorAll('[data-taj]')[i].textContent}`;$('taj-prev').disabled=i===0;$('taj-next').disabled=i===5}
+  $('taj-category-nav').addEventListener('click',e=>{const button=e.target.closest('[data-taj]');if(button)showTaj(Number(button.dataset.taj))});
+  $('taj-prev').onclick=()=>showTaj(currentTaj-1);
+  $('taj-next').onclick=()=>showTaj(currentTaj+1);
+  showTaj(0);
   const reading=[
     {latin:'Alif',tip:'Bunyi awal “a”; ucapkan dengan mulut terbuka.',example:'أَ'},
     {latin:'Ba',tip:'Rapatkan kedua bibir, lalu buka: “b”.',example:'بَ بِ بُ'},
@@ -349,21 +750,22 @@
   $('flash-prev').onclick=()=>renderFlash(--flash,'flash');$('flash-next').onclick=()=>renderFlash(++flash,'flash');renderFlash(flash,'flash');
   $('game-flash-prev').onclick=()=>renderFlash(--gameFlash,'game-flash');$('game-flash-next').onclick=()=>renderFlash(++gameFlash,'game-flash');renderFlash(gameFlash,'game-flash');
   const hadith=[
-    {title:'Kebersihan',arabic:'الطُّهُورُ شَطْرُ الْإِيمَانِ',translation:'Bersuci adalah separuh dari iman.',source:'Sahih Muslim no. 223',example:'Menjaga kebersihan badan dan berwudu sebelum salat.',url:'https://sunnah.com/muslim/2/1',icon:'sparkles'},
-    {title:'Kejujuran',arabic:'إِنَّ الصِّدْقَ يَهْدِي إِلَى الْبِرِّ',translation:'Sesungguhnya kejujuran membawa kepada kebaikan.',source:'Sahih al-Bukhari no. 6094',example:'Berkata benar dan mengakui kesalahan.',url:'https://sunnah.com/bukhari:6094',icon:'badge-check'},
-    {title:'Menyayangi sesama',arabic:'لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ',translation:'Tidak sempurna iman seseorang hingga ia mencintai untuk saudaranya apa yang ia cintai untuk dirinya sendiri.',source:'Sahih al-Bukhari no. 13',example:'Membantu teman dan tidak mengejeknya.',url:'https://sunnah.com/bukhari:13',icon:'heart'},
-    {title:'Menuntut ilmu',arabic:'وَمَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ',translation:'Siapa yang menempuh jalan untuk mencari ilmu, Allah mudahkan baginya jalan menuju surga.',source:'Sahih Muslim no. 2699a',example:'Rajin belajar dan menghormati guru.',url:'https://sunnah.com/muslim:2699a',icon:'graduation-cap'}
+    {title:'Kebersihan',arabic:'الطُّهُورُ شَطْرُ الْإِيمَانِ',translation:'Bersuci adalah separuh dari iman.',source:'Sahih Muslim no. 223',example:'Menjaga kebersihan badan dan berwudu sebelum salat.',url:'https://sunnah.com/muslim/2/1',icon:'sparkles',narration:'Hadis ini diriwayatkan oleh Imam Muslim dalam kitab Shahih Muslim (No. 223), dari Sahabat Abu Malik Al-Harits bin Asy-Sya\'ari radhiyallahu \'anhu.',meaning:'Bersuci itu penting dalam kehidupan beriman. Biasakan menjaga kebersihan dan berwudu sebelum salat.'},
+    {title:'Kejujuran',arabic:'إِنَّ الصِّدْقَ يَهْدِي إِلَى الْبِرِّ',translation:'Sesungguhnya kejujuran membawa kepada kebaikan.',source:'Sahih al-Bukhari no. 6094',example:'Berkata benar dan mengakui kesalahan.',url:'https://sunnah.com/bukhari:6094',icon:'badge-check',narration:'Riwayat Imam Al-Bukhari (No. 6094)',meaning:'Berkata jujur membantu kita berbuat baik. Beranilah berkata benar, termasuk saat melakukan kesalahan.'},
+    {title:'Menyayangi sesama',arabic:'لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ',translation:'Tidak sempurna iman seseorang hingga ia mencintai untuk saudaranya apa yang ia cintai untuk dirinya sendiri.',source:'Sahih al-Bukhari no. 13',example:'Membantu teman dan tidak mengejeknya.',url:'https://sunnah.com/bukhari:13',icon:'heart',narration:'Hadist ini tercatat dalam Shahih Bukhari No 15 dan Shahih Muslim No 40',meaning:'Sayangi orang lain seperti kamu ingin disayangi. Bantulah teman dan jangan mengejeknya.'},
+    {title:'Menuntut ilmu',arabic:'وَمَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ',translation:'Siapa yang menempuh jalan untuk mencari ilmu, Allah mudahkan baginya jalan menuju surga.',source:'Sahih Muslim no. 2699a',example:'Rajin belajar dan menghormati guru.',url:'https://sunnah.com/muslim:2699a',icon:'graduation-cap',narration:'Hadist ini tercatat dalam Shahih Muslim No 2699',meaning:'Mencari ilmu adalah usaha yang baik dan bernilai. Belajarlah dengan tekun dan hormati guru.'},
+    {title:'Salat berjemaah',arabic:'صَلَاةُ الْجَمَاعَةِ تَفْضُلُ صَلَاةَ الْفَذِّ بِسَبْعٍ وَعِشْرِينَ دَرَجَةً',translation:'Salat berjemaah lebih utama daripada salat sendirian sebanyak 27 derajat.',source:'Sahih al-Bukhari no. 645',example:'Salat bersama keluarga atau teman.',url:'https://sunnah.com/bukhari:645',icon:'users',narration:'Abdullah bin Umar meriwayatkan sabda Nabi Muhammad saw.; hadis ini dicantumkan sebagai riwayat Imam Bukhari. Ini keterangan riwayat singkat, bukan rangkaian sanad lengkap. Sanad lengkap belum dicantumkan.',meaning:'Salat berjemaah memiliki keutamaan besar. Kamu dapat membiasakan salat bersama keluarga atau teman, serta belajar disiplin dan kebersamaan.'}
   ];
-  $('hadith-list').innerHTML=hadith.map((h,i)=>`<article class="card hadith-card canva-card"><span class="iconbox"><i data-lucide="${h.icon}"></i></span><h2 style="font-size:21px;margin:0">${i+1}. ${h.title}</h2><div class="arabic" lang="ar">${h.arabic}</div><p><b>Terjemahan ringkas:</b> ${h.translation}</p><p><b>Contoh:</b> ${h.example}</p><p class="source">${h.source} · <a href="${h.url}" target="_blank" rel="noopener noreferrer">Buka sumber ↗</a></p></article>`).join('');
-  function showGame(n){document.querySelectorAll('.game').forEach((v,i)=>v.classList.toggle('active',i===n));document.querySelectorAll('[data-game]').forEach((v,i)=>v.classList.toggle('active',i===n))}
+  $('hadith-list').innerHTML=hadith.map((h,i)=>`<article class="card hadith-card canva-card"><span class="iconbox"><i data-lucide="${h.icon}"></i></span><h2 style="font-size:21px;margin:0">${i+1}. ${h.title}</h2><div class="hadith-parts"><section class="hadith-part full canva-card"><h3>Isi Hadis</h3><div class="arabic" lang="ar">${h.arabic}</div><p><b>Terjemahan ringkas:</b> ${h.translation}</p></section><section class="hadith-part canva-card"><h3>Sanad / Riwayat Singkat</h3><p>${h.narration||'Sanad lengkap belum dicantumkan. Keterangan rangkaian perawi belum tersedia dalam materi ini.'}</p></section><section class="hadith-part canva-card"><h3>Matan</h3><p>Isi hadis: ${h.translation}</p></section><section class="hadith-part full canva-card"><h3>Maksud Hadis</h3><p>${h.meaning}</p></section></div><p><b>Contoh:</b> ${h.example}</p><p class="source"><b>Sumber/Verifikasi:</b> ${h.source} · <a href="${h.url}" target="_blank" rel="noopener noreferrer">Buka sumber ↗</a></p></article>`).join('');
+  function showGame(n){document.querySelectorAll('.game').forEach((v,i)=>v.classList.toggle('active',i===n));document.querySelectorAll('[data-game]').forEach((v,i)=>{v.classList.toggle('active',i===n);v.setAttribute('aria-pressed',String(i===n))});announce.textContent=`Permainan ${document.querySelectorAll('[data-game]')[n].textContent} ditampilkan`}
   $('game-tabs').addEventListener('click',e=>{const b=e.target.closest('[data-game]');if(b)showGame(+b.dataset.game)});
   function renderGuess(){const idx=guessIndex%letters.length;$('guess-letter').textContent=letters[idx][0];$('guess-feedback').textContent='';const choices=[idx,(idx+7)%letters.length,(idx+14)%letters.length,(idx+21)%letters.length].sort((a,b)=>((a*7+guessIndex*3)%31)-((b*7+guessIndex*3)%31));$('guess-options').innerHTML=choices.map(i=>`<button class="choice canva-button" data-answer="${i}">${letters[i][1]}${letters[i][1]==='Ha'?' ('+letters[i][0]+')':''}</button>`).join('')}
-  $('guess-options').addEventListener('click',e=>{const b=e.target.closest('[data-answer]');if(!b||$('guess-options').querySelector('button:disabled'))return;const right=+b.dataset.answer===guessIndex%letters.length;$('guess-options').querySelectorAll('button').forEach(x=>{x.disabled=true;if(+x.dataset.answer===guessIndex%letters.length)x.classList.add('correct')});if(!right)b.classList.add('wrong');$('guess-feedback').textContent=right?'Hebat! Jawabanmu benar 🌟':'Belum tepat. Lihat jawaban yang berwarna hijau, ya!';if(right)point('guess-'+guessIndex)});
+  $('guess-options').addEventListener('click',e=>{const b=e.target.closest('[data-answer]');if(!b||$('guess-options').querySelector('button:disabled'))return;const right=+b.dataset.answer===guessIndex%letters.length;$('guess-options').querySelectorAll('button').forEach(x=>{x.disabled=true;if(+x.dataset.answer===guessIndex%letters.length)x.classList.add('correct')});if(!right)b.classList.add('wrong');$('guess-feedback').textContent=right?'Hebat! Jawabanmu benar 🌟':`Belum tepat. Jawaban yang benar: ${letters[guessIndex%letters.length][1]}.`;if(right)point('guess-'+guessIndex)});
   $('guess-next').onclick=()=>{guessIndex++;renderGuess()};renderGuess();
   const verse=['قُلْ','هُوَ','اللَّهُ','أَحَدٌ'];let placed=[];
-  function renderVerse(){const order=[2,0,3,1];$('verse-tokens').innerHTML=order.map(i=>`<button class="token canva-button" data-token="${i}" ${placed.includes(i)?'disabled':''} lang="ar">${verse[i]}</button>`).join('');$('verse-answer').innerHTML=placed.map((i,n)=>`<button class="token canva-button" data-remove="${n}" title="Hapus potongan ini" lang="ar">${verse[i]}</button>`).join('')}
-  $('verse-tokens').onclick=e=>{const b=e.target.closest('[data-token]');if(b){placed.push(+b.dataset.token);renderVerse();$('verse-feedback').textContent=''}};
-  $('verse-answer').onclick=e=>{const b=e.target.closest('[data-remove]');if(b){placed.splice(+b.dataset.remove,1);renderVerse();$('verse-feedback').textContent=''}};
+  function renderVerse(){const order=[2,0,3,1];$('verse-tokens').innerHTML=order.map(i=>`<button type="button" class="token canva-button" data-token="${i}" ${placed.includes(i)?'disabled':''} aria-label="Tambahkan potongan ${verse[i]}" lang="ar">${verse[i]}</button>`).join('');$('verse-answer').innerHTML=placed.map((i,n)=>`<button type="button" class="token canva-button" data-remove="${n}" aria-label="Hapus potongan ke-${n+1}: ${verse[i]}" lang="ar">${verse[i]}</button>`).join('');announce.textContent=`${placed.length} dari ${verse.length} potongan tersusun. Pilih potongan untuk menambah atau menghapus.`}
+  $('verse-tokens').onclick=e=>{const b=e.target.closest('[data-token]');if(b){placed.push(+b.dataset.token);renderVerse();($('verse-tokens').querySelector('button:not(:disabled)')||$('verse-check')).focus();$('verse-feedback').textContent=''}};
+  $('verse-answer').onclick=e=>{const b=e.target.closest('[data-remove]');if(b){placed.splice(+b.dataset.remove,1);renderVerse();($('verse-answer').querySelector('button')||$('verse-tokens').querySelector('button:not(:disabled)')).focus();$('verse-feedback').textContent=''}};
   $('verse-check').onclick=()=>{const right=placed.length===verse.length&&placed.every((piece,positionFromRight)=>piece===positionFromRight);$('verse-feedback').textContent=right?'Masyaallah, urutannya tepat! 🌟':'Belum tepat. Coba mulai dari potongan قُلْ, lalu periksa lagi.';if(right)point('verse')};
   $('verse-reset').onclick=()=>{placed=[];renderVerse();$('verse-feedback').textContent='Susun lagi, yuk!'};renderVerse();
   function renderMatch(){ $('match-rows').innerHTML=surahs.map((s,i)=>`<div class="match-row"><strong>${s}</strong><div><label class="sr-only" for="match-${i}">Pesan ${s}</label><select id="match-${i}" class="canva-dropdown"><option value="">Pilih pesan...</option>${messages.map((m,n)=>`<option value="${n}">${m}</option>`).join('')}</select></div></div>`).join('');$('match-feedback').textContent=''}
@@ -403,7 +805,7 @@
   let responses=Array(20).fill(null),submitted=false;
   function renderEval(){submitted=false;responses=Array(20).fill(null);$('eval-form').innerHTML=questions.map((q,i)=>`<article class="card eval-question canva-card"><h3>${i+1}. ${q[0]}</h3><div class="answers">${q[1].map((a,n)=>`<button type="button" class="choice canva-button" data-question="${i}" data-option="${n}" aria-pressed="false">${String.fromCharCode(65+n)}. ${a}</button>`).join('')}</div></article>`).join('');$('eval-result').hidden=true;$('eval-submit').hidden=false;$('eval-message').textContent='';$('eval-progress').textContent='0 dari 20 terjawab'}
   $('eval-form').onclick=e=>{const b=e.target.closest('[data-question]');if(!b||submitted)return;const i=+b.dataset.question;responses[i]=+b.dataset.option;b.parentElement.querySelectorAll('button').forEach(x=>{x.classList.toggle('selected',x===b);x.setAttribute('aria-pressed',x===b?'true':'false')});$('eval-progress').textContent=`${responses.filter(x=>x!==null).length} dari 20 terjawab`; $('eval-message').textContent=''};
-  $('eval-submit').onclick=()=>{const count=responses.filter(x=>x!==null).length;if(count<20){$('eval-message').textContent=`Masih ada ${20-count} soal yang belum dijawab. Ayo lengkapi dulu!`;return}submitted=true;const score=questions.reduce((n,q,i)=>n+(responses[i]===q[2]?1:0),0);$('eval-form').querySelectorAll('button').forEach(b=>{b.disabled=true;const i=+b.dataset.question,n=+b.dataset.option;if(n===questions[i][2])b.classList.add('correct');else if(n===responses[i])b.classList.add('wrong')});$('eval-result').innerHTML=`<h2>Hasil evaluasi: ${score} / 20 🌟</h2><p>${score>=16?'Hebat! Terus pertahankan semangat belajarmu.':'Terima kasih sudah mencoba! Yuk, pelajari lagi bagian yang masih sulit.'}</p><h3>Pembahasan setiap soal</h3>${questions.map((q,i)=>`<div class="result-review"><strong>${i+1}. ${responses[i]===q[2]?'Benar ✓':'Perlu dipelajari lagi'} — ${q[1][q[2]]}</strong><br>${q[4]}</div>`).join('')}<button id="eval-retry" class="btn canva-button">Ulangi evaluasi</button>`;$('eval-result').hidden=false;$('eval-submit').hidden=true;$('eval-message').textContent='Semua soal sudah diperiksa. Lihat pembahasannya di bawah.';$('eval-result').scrollIntoView({behavior:'smooth',block:'start'});$('eval-retry').onclick=()=>{renderEval();$('evaluation').scrollIntoView({behavior:'smooth'})}};
+  $('eval-submit').onclick=()=>{const count=responses.filter(x=>x!==null).length;if(count<20){$('eval-message').textContent=`Masih ada ${20-count} soal yang belum dijawab. Ayo lengkapi dulu!`;return}submitted=true;const score=questions.reduce((n,q,i)=>n+(responses[i]===q[2]?1:0),0);$('eval-form').querySelectorAll('button').forEach(b=>{b.disabled=true;const i=+b.dataset.question,n=+b.dataset.option;if(n===questions[i][2])b.classList.add('correct');else if(n===responses[i])b.classList.add('wrong')});$('eval-result').innerHTML=`<h2>Hasil evaluasi: ${score} / 20 🌟</h2><p>${score>=16?'Hebat! Terus pertahankan semangat belajarmu.':'Terima kasih sudah mencoba! Yuk, pelajari lagi bagian yang masih sulit.'}</p><h3>Pembahasan setiap soal</h3>${questions.map((q,i)=>`<div class="result-review"><strong>${i+1}. ${responses[i]===q[2]?'Benar ✓':'Perlu dipelajari lagi'} — ${q[1][q[2]]}</strong><br>${q[4]}</div>`).join('')}<button id="eval-retry" class="btn canva-button">Ulangi evaluasi</button>`;$('eval-result').hidden=false;$('eval-submit').hidden=true;$('eval-message').textContent='Semua soal sudah diperiksa. Lihat pembahasannya di bawah.';$('eval-result').scrollIntoView({behavior:document.body.classList.contains('reduce-motion')||matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});$('eval-retry').onclick=()=>{renderEval();$('evaluation').scrollIntoView({behavior:document.body.classList.contains('reduce-motion')||matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})}};
   renderEval();refreshStats();lucide.createIcons();
 })();
 </script>
